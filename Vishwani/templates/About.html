@@ -1,0 +1,105 @@
+{% extends 'Base.html'%}
+
+{% load static %}
+{% block title %}VishwaniPatlan-about{% endblock %}
+{% block extra_head %}
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" media="screen" href="{% static "css/About.css" %}"/>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row row1">
+        <div class="col-sm-12 ">
+            <h1>About Me</h1>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-6 personal">
+            <h2>{{disc.0.heading}}</h2>
+            <p>{{disc.0.discription|linebreaks}}</p>
+        </div>
+        <div class="col-lg-6 ">
+              <img class="img-fluid about" align="right" src="{%static "images/Abou.jpg"%}"/>
+        </div>
+    </div>
+      <div class="row ">
+        <div class="col-sm-12">
+            <h3>Technical Skills</h3>
+        </div>
+    </div>
+    <div class="row technical">
+        <div class="col-sm-4 ">
+            <img class="img-fluid skill" src="{%static "images/python.jpg"%}" alt="Python" class="img-thumbnail">
+            <h4 class="skills">Python</h4>
+        </div>
+        <div class="col-sm-4" >
+            <img class="img-fluid skill" src="{%static "images/django.png"%}" alt="Django" class="img-thumbnail">
+            <h5 class="skills">Django</h5>
+        </div>
+        <div class="col-sm-4" >
+            <img class="img-fluid skill1" src="{%static "images/c logo.png"%}" alt="C" class="img-thumbnail">
+            <h6 class="skills">C</h6>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-12 education">
+            <h7>My Qualifications</h7>
+        </div>
+    </div>
+
+    {% for i in Educ %}
+    <div class="container">
+        <div class="card text-white bg-info mb-3">
+        <div class="card-header">{{i.Class}}</div>
+        <h8 class="card-title" >{{i.School}}<br><br>Session : {{i.Session}}<br><br>Result : {{i.Result}}</h8>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <img class="img-fluid resume" src="{%static "images/pdf.png"%}">
+    <a href="{%static "images/Resume.pdf"%}" download>Download Resume</a>
+</div>
+
+<footer class="footer-area section-gap">
+                <div class="container-fluid">
+                    <div class="row">
+                             <div class="col-lg-5 col-xs-2">
+                            <div class="single-footer-widget ">
+                                <h4>About Me</h4>
+                                <p>
+                                 I believe mindfulness in the workplace is key to success.<br>Learning is more important part of life 'the more you learn the more you see'.
+                                </p>
+                                <p class="footer-text">
+                                    Copyright 2020| All rights reserved | This template is made by Vishwani Patlan
+                                </p>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-4  col-xs-2">
+                            <div class="single-footer-widget">
+                                <h4>Contact Me</h4>
+                                <p>Mobile-Number : +91-9760736922 <br> Whatsaap Me : +91-8755339910</p>
+                            </div>
+                         </div>
+
+                        <div class="col-lg-3 col-xs-2 social-widget">
+                            <div class="single-footer-widget">
+                                <h4>Follow Me</h4>
+                                <p>Let us be social</p>
+                                <div >
+                                    <a href="https://www.facebook.com/vishu.rajput.5811" target="_blank"><img class="img-fluid social-link"  src="{% static "images/facebook.png" %}"></a>
+                                    <a href="https://www.instagram.com/vishu9403/" target="_blank"><img class="img-fluid social-link"  src="{% static "images/instagram.png" %}"></a>
+                                    <a href="https://www.linkedin.com/feed/" target="_blank"><img class="img-fluid social-link"  src="{% static "images/linkedin.png" %}"></a>
+                                     <a href="https://mail.google.com/mail/u/1/?ogbl#inbox" target="_blank"><img class="img-fluid social-link"  src="{% static "images/gmail.png" %}"></a>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </footer>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'Base.html'%}
+
+{% load static %}
+{% block title %}VishwaniPatlan{% endblock %}
+{% block extra_head %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/home.css"/>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row row1">
+        <div class=" col-lg-6 col-xs-2 ">
+            <p>This is Me</p>
+            <h1>VISHWANI PATLAN</h1>
+            <p class="para">I'm an engineer specialization in ECE but I'm interested in IT sector so , I want to make my career in IT field that's why I develop programming skills as well.</p>
+        </div>
+        <div class="col-lg-6 col-xs-2  banner-right d-flex align-self-end">
+              <img class="img-fluid image1" src="{%static "images/Vishu.jpg"%}"/>
+        </div>
+    </div>
+    <div class="row row2">
+        <div class="col-lg-6  col-xs-2 ">
+              <img class="img-fluid about" src="{%static "images/Abou.jpg"%}"/>
+        </div>
+        <div class="col-lg-6 col-xs-2">
+               <h2>About Me</h2>
+            <p class="para1">I believe mindfulness in the workplace is key to success - a tenet I live out through my interests in yoga, music and cooking.Learning is more important part of life 'the more you learn the more you see'.</p>
+            <a class="btn btn-primary button1" href="http://127.0.0.1:8000/about/" role="button">View More</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer class="footer-area section-gap">
+                <div class="container-fluid">
+                    <div class="row row_footer">
+                             <div class="col-lg-5 col-xs-2">
+                            <div class="single-footer-widget ">
+                                <h4>About Me</h4>
+                                <p>
+                                 I believe mindfulness in the workplace is key to success.<br>Learning is more important part of life 'the more you learn the more you see'.
+                                </p>
+                                <p class="footer-text">
+                                    Copyright 2020| All rights reserved | This template is made by Vishwani Patlan
+                                </p>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-4  col-xs-2">
+                            <div class="single-footer-widget">
+                                <h4>Contact Me</h4>
+                                <p>Mobile-Number : +91-9760736922 <br> Whatsaap Me : +91-8755339910</p>
+                            </div>
+                         </div>
+
+                        <div class="col-lg-3 col-xs-2 social-widget">
+                            <div class="single-footer-widget">
+                                <h4>Follow Me</h4>
+                                <p>Let us be social</p>
+                                <div >
+                                    <a href="https://www.facebook.com/vishu.rajput.5811" target="_blank"><img class="img-fluid social-link"  src="{% static "images/facebook.png" %}"></a>
+                                    <a href="https://www.instagram.com/vishu9403/" target="_blank"><img class="img-fluid social-link"  src="{% static "images/instagram.png" %}"></a>
+                                    <a href="https://www.linkedin.com/feed/" target="_blank"><img class="img-fluid social-link"  src="{% static "images/linkedin.png" %}"></a>
+                                    <a href="https://mail.google.com/mail/u/1/?ogbl#inbox" target="_blank"><img class="img-fluid social-link"  src="{% static "images/gmail.png" %}"></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </footer>
+
+{% endblock %}
+
+
